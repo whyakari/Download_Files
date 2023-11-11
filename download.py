@@ -6,7 +6,7 @@ import asyncio
 def text():
     c = system("clear||cls")
     t = system('pyfiglet "Download  files" | lolcat')
-    byuser = system('echo "Telegram: @SakutaOficial" | cowsay -f eyes | lolcat')
+    byuser = system('echo "Telegram: @whyakari" | cowsay -f eyes | lolcat')
     return c, t, byuser
 text()
 
@@ -20,7 +20,7 @@ if url == "" or url in "@#$/)(&+:!*-_+-)" or url == "https://" or url == "http:/
 else:
     pass
 
-# escolher caminho de onde vai ficar o arquivo ou deixar por efault.
+# choose the path where the file will be located or leave it by default.
 dirName = str(input("choose dir path name? y[yes]/d[default] "))
 
 if dirName == "d": # default
@@ -31,16 +31,13 @@ else:
     print("error")
     quit()
 
-kindtype = input("kind type: ") # exemeple "zip", "ogg", "mp3"
-
+kindtype = input("kind type: ") # example "zip", "ogg", "mp3"
 progressbar = input("progressbar? [y/n] ")
 
 if progressbar == "y":
-    progressbar = True # Whether to display a progress bar during file download.
-
+    progressbar = True # whether to display a progress bar during file download.
 elif progressbar == "n":
-    progressbar = False # default None statusBar progress
-
+    progressbar = False # default is None statusBar progress
 else:
     print("not defined")
     quit()
@@ -50,4 +47,3 @@ async def main(url=url, dirName=dirName, kindtype=kindtype, progressbar=progress
     return path
 
 asyncio.run(main(url, dirName, kindtype, progressbar))
-
